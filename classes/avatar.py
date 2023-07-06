@@ -7,7 +7,7 @@ COLOR = "black"
 
 class Avatar(Turtle):
 
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
         self.penup()
         self.shape("turtle")
@@ -15,6 +15,13 @@ class Avatar(Turtle):
         self.setheading(90)
         self.color(COLOR)
 
-    def move_up(self):
+    def move_up(self) -> None:
         self.forward(MOVE_DISTANCE)
-        
+
+    def restart(self) -> None:
+        self.goto(START_POSITION)
+
+    def finish_line(self) -> None:
+        if self.ycor() > FINISH_LINE_Y:
+            return True
+        return False

@@ -21,7 +21,7 @@ class Car:
             random_y = randint(-250, 250)
             car.goto(300, random_y)
             self.all_cars.append(car)
-        
+
     def move(self) -> None:
         for car in self.all_cars:
             car.backward(START_MOVE_DISTANCE)
