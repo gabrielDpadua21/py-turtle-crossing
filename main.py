@@ -13,7 +13,6 @@ if __name__ == "__main__":
     avatar = Avatar()
 
     screen.onkey(avatar.move_up, "Up")
-    screen.onkey(avatar.move_down, "Down")
 
     while GAME_ON:
         sleep(0.1)

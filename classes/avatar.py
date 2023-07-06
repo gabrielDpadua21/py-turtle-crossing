@@ -16,10 +16,5 @@ class Avatar(Turtle):
         self.color(COLOR)
 
     def move_up(self):
-        new_y = self.ycor() + MOVE_DISTANCE
-        self.goto(self.xcor(), new_y)
-
-    def move_down(self):
-        new_y = self.ycor() - MOVE_DISTANCE
-        self.goto(self.xcor(), new_y)
+        self.forward(MOVE_DISTANCE)
         
