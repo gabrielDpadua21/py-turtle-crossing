@@ -2,6 +2,7 @@ from turtle import Screen
 from time import sleep
 from classes.avatar import Avatar
 from classes.car import Car
+from classes.score import Score
 
 
 if __name__ == "__main__":
@@ -14,6 +15,7 @@ if __name__ == "__main__":
 
     avatar = Avatar()
     cars = Car()
+    score = Score()
 
     screen.onkey(avatar.move_up, "Up")
 
@@ -26,9 +28,12 @@ if __name__ == "__main__":
         for car in cars.all_cars:
             if car.distance(avatar) < 20:
                 GAME_ON = False
+                score.game_over()
 
         if avatar.finish_line():
             avatar.restart()
+            cars.level_up()
+            score.level_up()
 
 
     screen.exitonclick()

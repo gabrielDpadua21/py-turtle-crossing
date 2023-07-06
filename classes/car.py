@@ -9,6 +9,7 @@ class Car:
 
     def __init__(self) -> None:
         self.all_cars = []
+        self.speed = START_MOVE_DISTANCE
 
 
     def create(self) -> None:
@@ -24,5 +25,8 @@ class Car:
 
     def move(self) -> None:
         for car in self.all_cars:
-            car.backward(START_MOVE_DISTANCE)
+            car.backward(self.speed)
+
+    def level_up(self) -> None:
+        self.speed += MOVE_INCREMENT
         
