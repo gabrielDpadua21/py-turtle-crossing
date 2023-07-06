@@ -1,49 +1,34 @@
-# Python template project
+# Python Turtle Crossing Game
 
-This project was created to be starting point for python projects using venv, pylint and pre-commit
+## Objective
 
----
+The objective of the game is to safely cross a busy street without getting hit by the passing vehicles.
 
-## Use
+## Gameplay
 
-```sh
-$ ./reset.sh
-```
+1. The player starts on one side of the street and tries to reach the other side.
+2. The player can move up, down, left, or right to avoid the oncoming vehicles.
+3. The vehicles move horizontally across the screen at different speeds.
+4. If the player gets hit by a vehicle, the game is over.
+5. The player earns points for successfully crossing the street without getting hit.
+6. The game ends when the player either gets hit by a vehicle or successfully crosses the street.
 
-## Setup
+## Controls
 
-### Setup venv
+- Up arrow: Move the player up
 
-```sh
-$ python -m venv venv
-```
-### Activate
+## Scoring
 
-```sh
-$ . venv/bin/activate
-```
+- Each successful crossing earns the player a certain number of points.
+- The player's score increases with each successful crossing.
+- The player's score is displayed on the screen.
 
-### Install
+## Game Over
 
-```sh
-$ pip install -r requirements.txt
-```
+- If the player gets hit by a vehicle, the game is over.
+- The player's final score is displayed on the screen.
+- The player can choose to restart the game after it's over.
 
----
-
-## Requirements
-
-- Python 3x+
-- Pip
-- Virtual Envs (venv)
-
-## Install venv
-
-```sh
-$  sudo apt install python[version]-venv
-```
-
----
 
 ## :computer: Copyright
 
