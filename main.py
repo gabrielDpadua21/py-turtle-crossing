@@ -22,6 +22,10 @@ if __name__ == "__main__":
         screen.update()
         cars.create()
         cars.move()
+        
+        for car in cars.all_cars:
+            if car.distance(avatar) < 20:
+                GAME_ON = False
 
 
     screen.exitonclick()
